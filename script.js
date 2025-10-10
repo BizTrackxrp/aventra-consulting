@@ -1,34 +1,24 @@
-/*
-  This small script adds interactivity:
-  - Toggles the mobile navigation menu when the hamburger icon is clicked.
-  - Adds a background to the navigation bar when the user scrolls down the page.
-*/
+// Navigation toggle and scroll effects for Aventra Consulting website
+// This script enables the mobile navigation menu and adds a blurred
+// background to the navigation bar when the user scrolls down the page.
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
-  const navbar = document.querySelector('.navbar');
-
-  // Toggle the navigation menu on mobile
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    navToggle.classList.toggle('open');
-  });
-
-  // Close menu when a nav link is clicked (helpful on small screens)
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('open');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
     });
-  });
-
-  // Change nav background on scroll
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+  }
+  // Add blur effect to navbar when scrolling
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  }
 });
