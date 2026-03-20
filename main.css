@@ -370,9 +370,15 @@ section {
     display: flex;
   }
 
-  /* Put hamburger on the LEFT, logo on the right */
+  /* Put hamburger on the LEFT, logo centered */
   .navbar {
     flex-direction: row-reverse;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /* Drawer slides in from the LEFT */
