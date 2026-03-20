@@ -370,6 +370,11 @@ section {
     display: flex;
   }
 
+  /* Put hamburger on the LEFT, logo on the right */
+  .navbar {
+    flex-direction: row-reverse;
+  }
+
   /* Drawer slides in from the LEFT */
   .nav-links {
     position: fixed;
