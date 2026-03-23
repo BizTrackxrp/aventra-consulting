@@ -370,15 +370,28 @@ section {
     display: flex;
   }
 
-  /* Put hamburger on the LEFT, logo centered */
+  /* Hamburger LEFT, logo centered */
   .navbar {
-    flex-direction: row-reverse;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 0.85rem 1rem !important;
+    position: fixed !important;
+  }
+
+  .nav-toggle {
+    display: flex !important;
+    flex-shrink: 0;
+    z-index: 300;
   }
 
   .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-size: 1rem !important;
+    white-space: nowrap !important;
   }
 
   /* Drawer slides in from the LEFT */
