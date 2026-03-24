@@ -136,6 +136,11 @@ a {
   width: 100%;
 }
 
+/* Hide close button on desktop — only shown inside mobile drawer */
+.nav-close {
+  display: none;
+}
+
 /* Mobile nav toggle (hamburger) */
 .nav-toggle {
   display: none;
