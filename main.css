@@ -666,3 +666,51 @@ section {
   left: 0;
   top: 0.2rem;
 }
+
+/* ============================================
+   NEW POSITIONING STYLES
+   ============================================ */
+
+.price-tag {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.price-tag-large {
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.alt-bg {
+  background: #ffffff !important;
+}
+
+.service-detail:not(.alt-bg) {
+  background: var(--light-bg);
+}
+
+.positioning p,
+.proof p,
+.who-we-help p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--secondary-color);
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
