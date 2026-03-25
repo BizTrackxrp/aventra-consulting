@@ -251,6 +251,13 @@ section {
   border-radius: var(--border-radius);
   text-align: center;
   transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item .price-tag {
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .service-item:hover {
